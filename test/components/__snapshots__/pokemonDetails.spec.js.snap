@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PokemonDetails /> render test rendering 1`] = `
+<div
+  className="pokemon-details"
+>
+  <span
+    className="back-button"
+    onClick={[Function]}
+  >
+    BACK
+  </span>
+  <img
+    className="sprite"
+    src="front_default"
+  />
+  <div
+    className="more-info"
+  >
+    <p>
+      NAME
+    </p>
+    <p>
+      HT 
+      30
+    </p>
+    <p>
+      WT 
+      50
+    </p>
+    <div
+      className="pokemon-details"
+    >
+      <span>
+        TYPE_NAME
+      </span>
+    </div>
+  </div>
+</div>
+`;
