@@ -67,6 +67,10 @@ body {
 			span {
 				flex-grow: 1;
 			}
+
+			.back-button {
+				display: none;
+			}
 		}
 	}
 }
@@ -77,6 +81,7 @@ body {
 		.menu-select {
 			width: 94%;
 			margin: 0;
+			border-radius: 0;
 		}
 
 		.pokedex-details {
@@ -100,8 +105,14 @@ body {
 					padding: 0;
 					margin: 0 10px;
 				}
-			}
 
+				.back-button {
+					display: block;
+					position: absolute;
+					top: 10px;
+					cursor: pointer;
+				}
+			}
 		}
-}
+	}
 }

@@ -3,7 +3,7 @@ const { connect } = require('react-redux');
 
 const PokemonDetails = require('../components/pokemonDetails');
 const PokemonList = require('../components/pokemonList');
-const { getPokemon } = require('./actions');
+const { clearPokemon, getPokemon } = require('./actions');
 
 const mapStateToProps = ({ singlePageApp }) => ({
   list: singlePageApp.list,
@@ -12,13 +12,14 @@ const mapStateToProps = ({ singlePageApp }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  clearPokemon: () => clearPokemon(dispatch),
   getPokemon: (url) => getPokemon(dispatch, url),
 });
 
 @connect(mapStateToProps, mapDispatchToProps)
 export class SinglePageApp extends React.Component {
   renderPokemonDetails() {
-    const { loadingDetailBlock, pokemon } = this.props;
+    const { clearPokemon, loadingDetailBlock, pokemon } = this.props;
 
     if (loadingDetailBlock) {
       return (<div className="pokedex-details">Carregando...</div>)
@@ -27,7 +28,8 @@ export class SinglePageApp extends React.Component {
     return (pokemon) ? (
       <div className="pokedex-details">
         <PokemonDetails
-          pokemon={ this.props.pokemon }
+          pokemon={ pokemon }
+          clearPokemon={ clearPokemon }
         />
       </div>
     ) : null;

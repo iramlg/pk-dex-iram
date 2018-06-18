@@ -1,9 +1,10 @@
 const React = require('react');
 const PropTypes = require('prop-types');
 
-const PokemonDetails = ({ pokemon }) => {
+const PokemonDetails = ({ clearPokemon, pokemon }) => {
   return (
     <div className="pokemon-details">
+      <span className="back-button" onClick={ () => {clearPokemon()} }>BACK</span>
       <img className="sprite" src={ pokemon.sprites.front_default } />
       <div className="more-info">
         <p>{ pokemon.name.toUpperCase() }</p>
@@ -20,6 +21,7 @@ const PokemonDetails = ({ pokemon }) => {
 }
 
 PokemonDetails.propTypes = {
+  clearPokemon: PropTypes.func.isRequired,
   pokemon: PropTypes.shape({
     name: PropTypes.string.isRequired,
     height: PropTypes.string.isRequired,

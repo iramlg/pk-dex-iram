@@ -18,6 +18,11 @@ const receivePokemon = (payload) => ({
   payload,
 });
 
+
+const clearPokemon = (dispatch) => {
+  dispatch(receivePokemon());
+}
+
 const fetchList = (dispatch) => {
   dispatch(receiveList([]));
 
@@ -57,4 +62,5 @@ module.exports = {
   ActionTypes,
   fetchList,
   getPokemon,
+  clearPokemon,
 };
