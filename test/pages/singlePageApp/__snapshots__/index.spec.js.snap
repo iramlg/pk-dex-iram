@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SinglePageApp /> render test empty 1`] = `
+<div>
+  <div
+    className="header"
+  >
+    <h1>
+      Pokedex
+    </h1>
+  </div>
+  <div
+    className="content"
+  >
+    <div
+      className="menu-select"
+    >
+      <PokemonList
+        list={Array []}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SinglePageApp /> render test loading 1`] = `
+<div
+  className="pokedex-details"
+>
+  Carregando...
+</div>
+`;
+
+exports[`<SinglePageApp /> render test selected pokemon 1`] = `
+<div
+  className="pokedex-details"
+>
+  <PokemonDetails
+    pokemon={
+      Object {
+        "name": "test",
+      }
+    }
+  />
+</div>
+`;
