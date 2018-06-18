@@ -49,7 +49,6 @@ export class SinglePageApp extends React.Component {
           { this.renderPokemonDetails() }
 				</div>
 			</div>
-
 		)
 	}
 }

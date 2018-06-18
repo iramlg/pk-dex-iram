@@ -1,20 +1,12 @@
-const React  = require('react');
-// const PropTypes = require('prop-types');
+const React = require('react');
+const PropTypes = require('prop-types');
 const PokemonItem = require('./pokemonItem');
 
 class pokemonList extends React.Component {
-  // static propTypes = {
-  //   list: PropTypes.arrayOf(PropTypes.object).isRequired,
-  //   orderId: PropTypes.string.isRequired,
-  //   linkText: PropTypes.string,
-  //   multi: PropTypes.number,
-  // };
-
-  // static defaultProps = {
-  //   layout: '',
-  //   linkText: '',
-  //   multi: 0,
-  // };
+  static propTypes = {
+    list: PropTypes.arrayOf(PropTypes.object).isRequired,
+    getPokemon: PropTypes.func.isRequired,
+  };
 
   render() {
     const { list, getPokemon } = this.props;

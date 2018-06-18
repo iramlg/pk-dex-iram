@@ -1,5 +1,5 @@
 const React = require('react');
-// const PropTypes = require('prop-types');
+const PropTypes = require('prop-types');
 
 const PokemonDetails = ({ pokemon }) => {
   return (
@@ -18,5 +18,16 @@ const PokemonDetails = ({ pokemon }) => {
     </div>
   )
 }
+
+PokemonDetails.propTypes = {
+  pokemon: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired,
+    weight: PropTypes.string.isRequired,
+    types: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    })).isRequired,
+  }),
+};
 
 module.exports = PokemonDetails;
