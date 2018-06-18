@@ -55,7 +55,7 @@ body {
 			display: flex;
 			flex-direction: row;
 
-			img {
+			.sprite {
 				width: 270px;
 				height: 270px;
 				flex-grow:1;
@@ -79,11 +79,30 @@ body {
 			margin-right: 0;
 			margin-bottom: 50px;
 		}
+
 		.pokedex-details {
 			position: fixed;
 	    width: 94%;
 	    top: 90px;
-	    height: 290px;
+			height: auto;
+	    min-height: 290px;
+
+			.pokemon-details {
+				flex-direction: column;
+
+				.sprite {
+					width: 50%;
+					margin: 0 25%;
+					height: auto;
+					flex-grow:1;
+				}
+
+				.more-info {
+					padding: 0;
+					margin: 0 10px;
+				}
+			}
+
 		}
 }
 }

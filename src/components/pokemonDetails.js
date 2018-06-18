@@ -4,7 +4,7 @@ const React = require('react');
 const PokemonDetails = ({ pokemon }) => {
   return (
     <div className="pokemon-details">
-      <img src={ pokemon.sprites.front_default } />
+      <img className="sprite" src={ pokemon.sprites.front_default } />
       <div className="more-info">
         <p>{ pokemon.name.toUpperCase() }</p>
         <p>HT { pokemon['height'] }</p>
