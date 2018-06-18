@@ -5,8 +5,8 @@ const { shallow } = require('enzyme');
 
 const mockPokemon = {
   name: 'name',
-  weight: '50',
-  height: '30',
+  weight: 50,
+  height: 30,
   sprites: {
     front_default: 'front_default'
   },

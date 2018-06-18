@@ -17,16 +17,7 @@ jest.mock('../../../src/singlePageApp/actions', () => ({
   },
   getPokemon: (dispatch) => {
     receiveDispatch_getPokemon = dispatch;
-  },
-  // ActionTypes : {
-  //   ITEMS_EAN_REQUEST: 'ITEMS/EAN/REQUEST',
-  //   ITEMS_EAN_RECEIVE: 'ITEMS/EAN/RECEIVE',
-  //   ITEMS_EAN_REQUESTSAVE: 'ITEMS/EAN/REQUESTSAVE',
-  //   ITEMS_EAN_CHANGE: 'ITEMS/EAN/CHANGE',
-  //   ITEMS_EAN_RECEIVESAVE: 'ITEMS/EAN/RECEIVESAVE',
-  //   ITEMS_EAN_RECEIVESAVE_ERROR: 'ITEMS/EAN/RECEIVESAVE/ERROR',
-  //   ITEMS_EAN_VALIDATION_ERROR: 'ITEMS/EAN/VALIDATION/ERROR',
-  // },
+  }
 }));
 
 jest.mock('react-redux', () => ({
@@ -58,13 +49,7 @@ const mockProps = {
 let instance;
 
 describe('<SinglePageApp />', () => {
-
   describe('render', () => {
-    // const newMock = Object.assign({}, mock, { error: 'error' });
-    // const localInstance = shallow(<SinglePageApp { ...mockProps } />).instance();
-    // const elm = renderer.create(localInstance.render()).toJSON();
-    // expect(elm).toMatchSnapshot();
-
     it('test empty', () => {
       const component = renderer.create(<SinglePageApp { ...mockProps } />).toJSON();
       expect(component).toMatchSnapshot();
@@ -84,15 +69,4 @@ describe('<SinglePageApp />', () => {
       expect(elm).toMatchSnapshot();
     });
   });
-
-  // describe('Props', () => {
-  //   it('types', () => {
-  //     expect(Object.keys(SinglePageApp.propTypes).length).toBe(2);
-  //
-  //     ['list', 'getPokemon'].forEach(prop => {
-  //       expect(SinglePageApp.propTypes[prop]).toBeTruthy();
-  //     });
-  //
-  //   });
-  // });
 });

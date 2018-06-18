@@ -24,11 +24,11 @@ PokemonDetails.propTypes = {
   clearPokemon: PropTypes.func.isRequired,
   pokemon: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    height: PropTypes.string.isRequired,
-    weight: PropTypes.string.isRequired,
+    height: PropTypes.number.isRequired,
+    weight: PropTypes.number.isRequired,
     types: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-    })).isRequired,
+      name: PropTypes.string,
+    })),
   }),
 };
 
