@@ -38,41 +38,10 @@ body {
 
 			&:hover {
 				background: #CCC;
-				cursor: pointer
+				cursor: pointer;
 			}
 			&.active {
 				background: #CCC;
-			}
-		}
-		.controllers {
-			position: absolute;
-			width: 100%;
-			bottom: -35px;
-
-			.arrow-right {
-				float: right;
-				margin-right: 10px;
-				width: 0;
-				height: 0;
-				border-top: 15px solid transparent;
-				border-bottom: 15px solid transparent;
-				border-left: 60px solid yellow;
-				cursor: pointer;
-				&:hover {
-					border-left: 60px solid black;
-				}
-			}
-			.arrow-left {
-				float: left;
-				width: 0;
-				height: 0;
-				border-top: 15px solid transparent;
-				border-bottom: 15px solid transparent;
-				border-right: 60px solid yellow;
-				cursor: pointer;
-				&:hover {
-					border-right: 60px solid black;
-				}
 			}
 		}
 	}
@@ -111,9 +80,8 @@ body {
 			margin-bottom: 50px;
 		}
 		.pokedex-details {
-			// width: auto;
 			position: fixed;
-	    width: 95%;
+	    width: 94%;
 	    top: 90px;
 	    height: 290px;
 		}
