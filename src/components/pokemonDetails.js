@@ -9,7 +9,7 @@ const PokemonDetails = ({ clearPokemon, pokemon }) => (
       <p>{ pokemon.name.toUpperCase() }</p>
       <p>HT { pokemon.height }</p>
       <p>WT { pokemon.weight }</p>
-      <div className="pokemon-details">
+      <div className="pokemon-details-types">
         { pokemon.types.map(type => (<span key={ type.type.name }>{ type.type.name.toUpperCase() }</span>)) }
       </div>
     </div>

@@ -30,7 +30,7 @@ exports[`<PokemonDetails /> render test rendering 1`] = `
       50
     </p>
     <div
-      className="pokemon-details"
+      className="pokemon-details-types"
     >
       <span>
         TYPE_NAME
