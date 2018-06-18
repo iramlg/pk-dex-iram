@@ -21,12 +21,16 @@ export class SinglePageApp extends React.Component {
     const { loadingDetailBlock, pokemon } = this.props;
 
     if (loadingDetailBlock) {
-      return (<p>loading</p>)
+      return (<div className="pokedex-details">Carregando...</div>)
     }
 
-    return (pokemon) ? <PokemonDetails
-      pokemon={ this.props.pokemon }
-    /> : null;
+    return (pokemon) ? (
+      <div className="pokedex-details">
+        <PokemonDetails
+          pokemon={ this.props.pokemon }
+        />
+      </div>
+    ) : null;
   }
 
 	render() {
@@ -37,13 +41,12 @@ export class SinglePageApp extends React.Component {
 				</div>
 				<div className="content">
 					<div className="menu-select">
-					 	<p>Select dsasadsda  das ads</p>
-            { this.renderPokemonDetails() }
             <PokemonList
               list={ this.props.list }
               getPokemon={ this.props.getPokemon }
             />
 					</div>
+          { this.renderPokemonDetails() }
 				</div>
 			</div>
 
