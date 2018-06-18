@@ -16,6 +16,7 @@ exports[`<SinglePageApp /> render test empty 1`] = `
       className="menu-select"
     >
       <PokemonList
+        getPokemon={[MockFunction]}
         list={Array []}
       />
     </div>
@@ -36,6 +37,7 @@ exports[`<SinglePageApp /> render test selected pokemon 1`] = `
   className="pokedex-details"
 >
   <PokemonDetails
+    clearPokemon={[MockFunction]}
     pokemon={
       Object {
         "name": "test",

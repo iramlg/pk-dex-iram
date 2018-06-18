@@ -4,16 +4,16 @@ const ActionTypes = {
   POKEMON_RECEIVE: 'POKEMON/RECEIVE',
 };
 
-const receiveList = (payload) => ({
+const receiveList = payload => ({
   type: ActionTypes.LIST_RECEIVE,
   payload,
 });
 
-const requestGetPokemon = (payload) => ({
+const requestGetPokemon = () => ({
   type: ActionTypes.POKEMON_REQUEST,
 });
 
-const receivePokemon = (payload) => ({
+const receivePokemon = payload => ({
   type: ActionTypes.POKEMON_RECEIVE,
   payload,
 });
@@ -21,7 +21,7 @@ const receivePokemon = (payload) => ({
 
 const clearPokemon = (dispatch) => {
   dispatch(receivePokemon());
-}
+};
 
 const fetchList = (dispatch) => {
   dispatch(receiveList([]));
@@ -33,11 +33,11 @@ const fetchList = (dispatch) => {
       });
     })
     .catch((err) => {
-      console.log('Failed retrieving information', err);
+      console.error('Failed retrieving information', err); // eslint-disable-line
     });
 };
 
-const getPokemon = (dispatch, url ) => {
+const getPokemon = (dispatch, url) => {
   dispatch(requestGetPokemon());
 
   return fetch(url)
@@ -47,7 +47,7 @@ const getPokemon = (dispatch, url ) => {
       });
     })
     .catch((err) => {
-      console.log('Failed retrieving information', err);
+      console.error('Failed retrieving information', err); // eslint-disable-line
     });
 };
 

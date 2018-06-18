@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PokemonList /> render test empty list 1`] = `null`;
+exports[`<PokemonList /> render test empty list 1`] = `
+<div
+  className="item-list"
+/>
+`;
 
 exports[`<PokemonList /> render test rendering 1`] = `
 <div

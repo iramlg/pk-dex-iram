@@ -1,9 +1,7 @@
-const { createStore, compose, applyMiddleware } = require('redux');
+const { createStore } = require('redux');
 const reducers = require('./reducers');
 
-module.exports = (data) => {
-  return createStore(
-    reducers,
-    data,
-  );
-};
+module.exports = data => createStore(
+  reducers,
+  data,
+);

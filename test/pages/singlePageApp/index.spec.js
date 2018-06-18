@@ -32,7 +32,7 @@ jest.mock('react-redux', () => ({
 
     const dispatchInst = dispatch('dispatch');
     dispatchInst.getPokemon();
-    dispatchInst.clearPokemon();
+    dispatchInst.clearPokemonProp();
 
     return (view) => {
       receiveView = view;
@@ -44,6 +44,8 @@ const mockProps = {
   list: [],
   loadingDetailBlock: false,
   pokemon: null,
+  clearPokemonProp: jest.fn(),
+  getPokemon: jest.fn(),
 }
 
 let instance;

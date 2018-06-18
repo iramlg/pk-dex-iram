@@ -11,6 +11,7 @@ exports[`<PokemonDetails /> render test rendering 1`] = `
     BACK
   </span>
   <img
+    alt="name"
     className="sprite"
     src="front_default"
   />

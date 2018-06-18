@@ -8,14 +8,12 @@ const { fetchList } = require('./singlePageApp/actions');
 
 fetchList(store.dispatch);
 
-const App = () => {
-  return (
-    <Provider store={ store }>
-      <SinglePageApp />
-    </Provider>
-  );
-};
+const App = () => (
+  <Provider store={ store }>
+    <SinglePageApp />
+  </Provider>
+);
 
 export default App;
 
-ReactDOM.hydrate(<App />, document.getElementById("app"));
+ReactDOM.hydrate(<App />, document.getElementById('app'));
