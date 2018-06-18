@@ -2,9 +2,10 @@
   "name": "pk-dex-iram",
   "version": "1.0.0",
   "description": "> A simple pokedex project made in React + Redux",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "start": "node ./server.js",
+    "start-dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -35,5 +36,7 @@
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
