@@ -30,6 +30,13 @@ npm run test
 npm run lint
 ```
 
+### To run tests end-to-end
+
+```
+npm run setup:e2e
+npm run test:e2e
+```
+
 ## Production
 
 ### Build for production
