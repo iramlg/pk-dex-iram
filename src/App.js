@@ -16,7 +16,4 @@ const App = () => (
 
 export default App;
 
-document.getElementsByClassName("carregarReact")[0].addEventListener("click", () => {
-	ReactDOM.hydrate(<App />, document.getElementById('app'));
-})
-
+ReactDOM.hydrate(<App />, document.getElementById('app'));
